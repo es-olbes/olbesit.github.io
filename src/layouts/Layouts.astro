@@ -1,0 +1,27 @@
+---
+interface props {
+  title: string;
+}
+import "../styles/Layout.css";
+import NavBar from "../components/landing/NavBar.astro"
+import Footer from "../components/landing/Footer.astro";
+
+const {title} = Astro.props
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLBES IT | { title }</title>
+  </head>
+  <NavBar/>
+  <body>
+    <main class="md:pt-10">
+      <slot />
+    </main>
+  </body>
+  <Footer/>
+  
+</html>
